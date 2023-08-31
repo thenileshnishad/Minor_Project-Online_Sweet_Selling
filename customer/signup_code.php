@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     if ($insertResult->getInsertedCount() > 0) {
-        echo "User registered successfully!";
+        header('Location: signin.html');
     } else {
         echo "User registration failed.";
     }
