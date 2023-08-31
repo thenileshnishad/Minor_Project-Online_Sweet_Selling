@@ -1,5 +1,6 @@
 <?php
 require '../vendor/autoload.php';
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
@@ -15,7 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ]);
 
     if ($userData) {
-        echo "Sign-in successful!";
+        $_SESSION["email"] = $email;
+        $_SESSION["custName"] = $_POST["name"];
+        $_SESSION["address"] = $_POST["address"];
+        $_SESSION["mobile"] = $_POST["mobno"];
+
+        $_SESSION["signedin"] = true;
+        header("Location: index.php");
     } else {
         echo "Invalid email or password.";
     }
