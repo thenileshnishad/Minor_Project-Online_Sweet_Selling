@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($userData) {
         $_SESSION["email"] = $email;
-        $_SESSION["custName"] = $_POST["name"];
-        $_SESSION["address"] = $_POST["address"];
-        $_SESSION["mobile"] = $_POST["mobno"];
+        $_SESSION["custName"] = $userData["name"];
+        $_SESSION["address"] = $userData["address"];
+        $_SESSION["mobile"] = $userData["mobno"];
 
         $_SESSION["signedin"] = true;
         header("Location: index.php");
