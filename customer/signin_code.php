@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: index.php");
     } else {
         echo "Invalid email or password.";
+        echo '<br><br><a href="signup.html">Go to home page</a>';
     }
 }
 ?>
