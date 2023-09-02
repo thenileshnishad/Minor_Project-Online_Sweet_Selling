@@ -10,6 +10,6 @@ session_destroy();
     </head>
     <body>
         <h3>You have been logged out</h3>
-        <a href="signin.php"><button>Return to the singin page</button></a>
+        <a href="index.php"><button>Return to the singin page</button></a>
     </body>
 </html>
