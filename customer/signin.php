@@ -1,3 +1,23 @@
+<html>
+<head>
+    <title>Customer Sign In</title>
+</head>
+<body>
+    <h2>Customer Sign In</h2>
+    <form action="" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Sign In"><br><br>
+
+        <a href="signup.php">Don't have an account?</a>
+    </form>
+</body>
+</html>
+
 <?php
 require '../vendor/autoload.php';
 session_start();
@@ -25,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: index.php");
     } else {
         echo "Invalid email or password.";
-        echo '<br><br><a href="signup.html">Go to home page</a>';
+        echo '<br><br><a href="index.php">Go to home page</a>';
     }
 }
 ?>
