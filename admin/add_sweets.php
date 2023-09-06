@@ -1,7 +1,9 @@
 <?php
 
 if (isset($_SESSION["signedin"]) == true) { ?>
-
+    <head>
+        <link rel="stylesheet" href="css/add_sweetsStyle.css">
+    </head>
     <body>
         <form action="" method="post" enctype="multipart/form-data" class="sweet-form">
             <label for="sweetname">Sweet name:</label>
