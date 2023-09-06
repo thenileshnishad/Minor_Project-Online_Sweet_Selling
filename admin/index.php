@@ -6,9 +6,10 @@ if (isset($_SESSION["signedin"]) == true) {
     <html>
     <head>
         <title>Welcome Admin</title>
+        <link rel="stylesheet" href="css/indexStyle.css">
     </head>
     <body>
-        <div>
+        <div class="heading">
             <a href="index.php">
                 <h1>Welcome to Admin Panel of Online Sweet Selling</h1>
             </a>
@@ -16,6 +17,7 @@ if (isset($_SESSION["signedin"]) == true) {
         <div class="nav">
             <a href="index.php?add_sweets">Add Sweets</a>
             <a href="index.php?manage_sweets">Manage Sweets</a>
+            <a href="logout.php">Admin Logout</a>
         </div>
     </body>
     </html>
