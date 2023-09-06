@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Admin Sign In</title>
+    <link rel="stylesheet" href="css/signinStyle.css">
 </head>
 <body>
     <h2>Admin Sign In</h2>
