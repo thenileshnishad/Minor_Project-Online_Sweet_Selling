@@ -5,11 +5,13 @@ session_destroy();
 ?>
 
 <html>
-    <head>
-        <title>Admin Logged Out</title>
-    </head>
-    <body>
-        <h3>You have been logged out</h3>
-        <a href="index.php"><button>Return to the singin page</button></a>
-    </body>
+<head>
+    <title>Admin Logged Out</title>
+</head>
+<body>
+    <script>
+        alert("You have been logged out!");
+        window.location.href = "signin.php";
+    </script>
+</body>
 </html>
