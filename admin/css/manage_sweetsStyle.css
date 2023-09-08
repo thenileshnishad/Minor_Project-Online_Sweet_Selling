@@ -1,0 +1,65 @@
+/* Style the table container */
+.sweet-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+/* Style table headers (th) */
+.sweet-table th {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+
+/* Style table cells (td) */
+.sweet-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Style alternating row colors for better readability */
+.sweet-table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Style edit and delete links/buttons in the cells */
+.sweet-table .edit-button,
+.sweet-table .delete-button {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.sweet-table .edit-button:hover,
+.sweet-table .delete-button:hover {
+    color: #0056b3;
+}
+
+/* Style the delete link */
+.delete-link {
+    text-decoration: none;
+    color: #FF0000;
+    font-size: 14px;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+    color: #CC0000;
+}
+
+/* Style the edit link */
+.edit-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+    color: #11999E;
+}

@@ -4,6 +4,9 @@ if (isset($_SESSION["signedin"]) == true) {
 ?>
     <html>
 
+    <head>
+        <link rel="stylesheet" href="css/manage_sweetsStyle.css">
+    </head>
     <table class="sweet-table">
         <tr>
             <th>Sweet name</th>
