@@ -17,6 +17,7 @@ if (isset($_SESSION["signedin"]) == true) {
         <div class="nav">
             <a href="index.php?add_sweets">Add Sweets</a>
             <a href="index.php?manage_sweets">Manage Sweets</a>
+            <a href="index.php?front">Add new Admin</a>
             <a href="index.php?manage_customers">Manage Customers</a>
             <a href="logout.php">Admin Logout</a>
         </div>
@@ -37,6 +38,16 @@ if (isset($_SESSION["signedin"]) == true) {
 
     if (isset($_GET['edit_sweets'])) {
         include("edit_sweets.php");
+    }
+
+    if (!isset($_GET['add_sweets'])) {
+        if (!isset($_GET['manage_sweets'])) {
+            if (!isset($_GET['manage_customers'])) {
+                if (!isset($_GET['edit_sweets'])) {
+                    include("front.php");
+                }
+            }
+        }
     }
 } else {
     header("Location: signin.php");
