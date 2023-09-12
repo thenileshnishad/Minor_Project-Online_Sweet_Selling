@@ -11,11 +11,18 @@ body {
 /* Style the form container */
 form {
     max-width: 300px;
-    padding: 20px;
+    padding: 50px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f4f4f4;
     text-align: center;
+}
+
+/* Style the heading */
+h2 {
+    color: #007BFF;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 /* Style form labels */
