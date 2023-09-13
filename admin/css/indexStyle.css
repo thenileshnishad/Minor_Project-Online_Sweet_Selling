@@ -8,6 +8,14 @@ p {
     padding: 0;
 }
 
+/* Style the logo */
+.logo {
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 /* Style the heading */
 .heading {
     text-align: center;
@@ -16,6 +24,7 @@ p {
 }
 
 .heading a {
+    display: inline-flex;
     text-decoration: none;
     color: #fff;
 }

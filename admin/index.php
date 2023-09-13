@@ -12,7 +12,9 @@ if (isset($_SESSION["signedin"]) == true) {
     <body>
         <div class="heading">
             <a href="index.php">
+                <img src="../admin/site_images/OSS.jpg" alt="Logo" class="logo">
                 <h1>Welcome to Admin Panel of Online Sweet Selling</h1>
+                <img src="../admin/site_images/OSS.jpg" alt="Logo" class="logo">
             </a>
         </div>
         <div class="nav">
