@@ -1,0 +1,78 @@
+/* Style the container for the admin dashboard */
+.body {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the heading */
+h2 {
+    color: #007BFF;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* Style the welcome message */
+.welcome {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Style the description text */
+p {
+    font-size: 20px;
+}
+
+/* Style the "Add New Admin" section */
+.addadmin {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the heading for the "Add New Admin" section */
+.addadmin h3 {
+    color: #007BFF;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Style form labels in the "Add New Admin" section */
+.addadmin label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Style form inputs in the "Add New Admin" section */
+.addadmin input[type="email"],
+.addadmin input[type="password"],
+.addadmin input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the submit button in the "Add New Admin" section */
+.addadmin input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.addadmin input[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,5 +1,9 @@
 <html>
 
+<head>
+    <link rel="stylesheet" href="css/frontStyle.css">
+</head>
+
 <body>
     <div class="body">
         <h2>Admin Dashboard</h2>
