@@ -5,6 +5,7 @@ if (isset($_SESSION["signedin"]) == true) { ?>
         <link rel="stylesheet" href="css/add_sweetsStyle.css">
     </head>
     <body>
+        <h2>Add Sweet Data</h2>
         <form action="" method="post" enctype="multipart/form-data" class="sweet-form">
             <label for="sweetname">Sweet name:</label>
             <input type="text" id="sweetname" name="sweet_name" required><br>

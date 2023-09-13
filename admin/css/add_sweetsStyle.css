@@ -1,20 +1,28 @@
 /* Style the form container */
 .sweet-form {
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: center;
+}
+
+/* Style the heading */
+h2 {
+    color: #007BFF;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Style form labels */
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: bold;
-    font-size: 18px;
-    /* Increase the font size */
+    font-size: 22px;
 }
 
 /* Style form inputs and textarea */
@@ -22,20 +30,18 @@ input[type="text"],
 input[type="file"],
 textarea {
     width: 100%;
-    padding: 12px;
-    /* Increase the padding for better spacing */
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 /* Style the submit button */
 #submit {
     background-color: #007BFF;
     color: #fff;
-    padding: 12px 24px;
-    /* Increase the padding for a larger button */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;

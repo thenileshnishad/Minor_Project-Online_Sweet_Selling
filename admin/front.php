@@ -6,13 +6,12 @@
 
 <body>
     <div class="body">
-        <h2>Admin Dashboard</h2>
-        <p class="welcome">Welcome, Admin</p>
-        <p>You are now on the administration page of the Online Sweet Selling site. This dashboard gives you full
+        <h2 class="welcome">Welcome! Admin <?php echo $_SESSION["adminName"] ?></h2>
+        <p>You are currently on the administration page of the Online Sweet Selling site. This dashboard gives you full
             control to manage sweet data updates and deletions, as well as to delete customer data.</p>
     </div>
     <div class="addadmin">
-        <h3>Create new Admin</h3>
+        <h2>Create new Admin</h2>
         <form action="" method="post">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>

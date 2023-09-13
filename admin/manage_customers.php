@@ -10,6 +10,7 @@ if (isset($_SESSION["signedin"]) == true) {
     </head>
 
     <body>
+        <h2>Delete Customer Details from Here</h2>
         <table class="user-table">
             <tr>
                 <th>Name</th>

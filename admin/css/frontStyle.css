@@ -9,14 +9,7 @@
 /* Style the heading */
 h2 {
     color: #007BFF;
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-
-/* Style the welcome message */
-.welcome {
-    font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 15px;
 }
 
@@ -33,10 +26,11 @@ p {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #f4f4f4;
 }
 
 /* Style the heading for the "Add New Admin" section */
-.addadmin h3 {
+.addadmin h2 {
     color: #007BFF;
     font-size: 25px;
     margin-bottom: 20px;
@@ -46,8 +40,8 @@ p {
 .addadmin label {
     display: block;
     font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
 /* Style form inputs in the "Add New Admin" section */
@@ -56,17 +50,17 @@ p {
 .addadmin input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 /* Style the submit button in the "Add New Admin" section */
 .addadmin input[type="submit"] {
     background-color: #007BFF;
     color: #fff;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;

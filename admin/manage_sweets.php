@@ -7,6 +7,7 @@ if (isset($_SESSION["signedin"]) == true) {
     <head>
         <link rel="stylesheet" href="css/manage_sweetsStyle.css">
     </head>
+    <h2>Edit and Delete Sweet Details from Here</h2>
     <table class="sweet-table">
         <tr>
             <th>Sweet name</th>
