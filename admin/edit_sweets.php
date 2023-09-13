@@ -22,8 +22,13 @@ if (isset($_SESSION["signedin"]) == true) {
 
 <html>
 
+<head>
+    <link rel="stylesheet" href="css/edit_sweetsStyle.css">
+</head>
+
 <body>
-    <form action="" method="post" enctype="multipart/form-data" class="sweet_form">
+    <h2>Edit Sweet Data</h2>
+    <form action="" method="post" enctype="multipart/form-data" class="sweet-form">
         <label for="sweetname">Sweet name:</label>
         <input type="text" id="sweetname" name="sweet_name" value="<?php echo $sweet_name; ?>" /><br>
 

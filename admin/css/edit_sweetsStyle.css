@@ -1,0 +1,53 @@
+/* Style the heading */
+h2 {
+    color: #007BFF;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the form container */
+.sweet-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Style form labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Style form inputs and textarea */
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Style the submit button */
+#submit {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
