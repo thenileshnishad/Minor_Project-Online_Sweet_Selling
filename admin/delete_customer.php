@@ -1,4 +1,5 @@
 <?php
+session_name("admin");
 session_start();
 
 if (isset($_SESSION["signedin"]) == true) {
