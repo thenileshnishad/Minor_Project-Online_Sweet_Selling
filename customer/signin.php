@@ -20,6 +20,7 @@
 
 <?php
 require '../vendor/autoload.php';
+session_name("customer");
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

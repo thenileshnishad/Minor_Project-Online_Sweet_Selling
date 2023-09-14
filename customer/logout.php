@@ -1,4 +1,5 @@
 <?php
+session_name("customer");
 session_start();
 session_unset();
 session_destroy();
