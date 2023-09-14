@@ -10,7 +10,7 @@ session_destroy();
         <title>Logged Out</title>
     </head>
     <body>
-        <h3>You have been logged out</h3>
-        <a href="index.php"><button>Return to home page</button></a>
+        echo "<script>alert('You have been logged out!');</script>";
+        echo "<script>window.location.href='index.php';</script>";
     </body>
 </html>
