@@ -51,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     if ($insertResult->getInsertedCount() > 0) {
-        header('Location: signin.html');
+        echo "<script>alert('Account created successfully!')</script>";
+        echo "<script>window.location.href='index.php';</script>";
     } else {
         echo "User registration failed.";
     }
