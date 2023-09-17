@@ -22,7 +22,7 @@ if (isset($_SESSION["signedin"]) == true) {
 
         <div class="nav">
             <a href="index.php">Home</a>
-            <a href="index.php?custprofile">Welcome Admin</a>
+            <a href="index.php?custprofile">Welcome <?php echo $_SESSION['custName']; ?></a>
             <a href="logout.php">Logout</a>
         </div>
     </body>
