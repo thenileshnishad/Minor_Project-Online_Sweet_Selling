@@ -22,13 +22,16 @@ if (isset($_SESSION["signedin"]) == true) {
 
         <div class="nav">
             <a href="index.php">Home</a>
+            <a href="index.php?custprofile">Welcome Admin</a>
             <a href="logout.php">Logout</a>
         </div>
     </body>
 
     </html>
 <?php
-    echo "Welcome " . $_SESSION["custName"];
+    if (isset($_GET['custprofile'])) {
+        include("custprofile.php");
+    }
 } else {
     header("Location: signin.php");
 }
