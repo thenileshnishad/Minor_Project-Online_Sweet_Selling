@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Customer Sign In</title>
+    <link rel="stylesheet" href="css/signinStyle.css">
 </head>
 <body>
     <h2>Customer Sign In</h2>
