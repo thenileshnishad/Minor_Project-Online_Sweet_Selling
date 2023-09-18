@@ -2,7 +2,7 @@
 
 <head>
     <title>Change the password</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/custpasswdStyle.css">
 </head>
 
 <body>
