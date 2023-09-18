@@ -36,7 +36,9 @@ if (isset($_SESSION["signedin"]) == true) {
         <label for="mobno">Mobile number:</label>
         <input type="number" id="mobno" name="mobno" required value="<?php echo $custMob; ?>"><br><br>
 
-        <input type="submit" id="submit" name="update" value="Update">
+        <input type="submit" id="submit" name="update" value="Update"><br><br>
+
+        <a href="index.php?custpasswd">Change your password</a>
     </form>
 </body>
 

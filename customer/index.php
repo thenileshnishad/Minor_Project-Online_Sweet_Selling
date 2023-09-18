@@ -32,6 +32,10 @@ if (isset($_SESSION["signedin"]) == true) {
     if (isset($_GET['custprofile'])) {
         include("custprofile.php");
     }
+
+    if (isset($_GET['custpasswd'])) {
+        include("custpasswd.php");
+    }
 } else {
     header("Location: signin.php");
 }
