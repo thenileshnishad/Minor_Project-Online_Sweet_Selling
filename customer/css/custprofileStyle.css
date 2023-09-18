@@ -1,0 +1,65 @@
+/* Style the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Style the heading */
+h2 {
+    color: #007BFF;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style form labels */
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+/* Style form inputs and textarea */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Style the submit button */
+#submit {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
+/* Style the link to change password */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

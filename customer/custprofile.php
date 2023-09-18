@@ -21,7 +21,7 @@ if (isset($_SESSION["signedin"]) == true) {
 <html>
 
 <head>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/custprofileStyle.css">
 </head>
 
 <body>
