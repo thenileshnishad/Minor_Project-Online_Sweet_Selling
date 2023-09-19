@@ -11,7 +11,7 @@ $sweetsList = $collection->find();
 <html>
 
 <head>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/sweetsStyle.css">
 </head>
 
 <body>
