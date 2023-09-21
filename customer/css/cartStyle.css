@@ -1,0 +1,71 @@
+/* Style the "Shopping Cart" heading */
+h2 {
+    color: #007BFF;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the shopping cart table */
+.cart-detail {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+/* Style table headers */
+.cart-detail th {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Style table rows */
+.cart-detail tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Style table cells */
+.cart-detail td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+}
+
+/* Style the "Remove" button */
+.cart-detail button {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-detail button:hover {
+    background-color: #CC0000;
+}
+
+/* Style the "Checkout" button */
+form button[name="generatebill"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form button[name="generatebill"]:hover {
+    background-color: #0056b3;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
