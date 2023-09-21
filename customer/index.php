@@ -24,6 +24,7 @@ if (isset($_SESSION["signedin"]) == true) {
             <a href="index.php">Home</a>
             <a href="index.php?sweets">Sweets</a>
             <a href="index.php?cart">Cart</a>
+            <a href="index.php?contactus">Contact Us</a>
             <a href="index.php?custprofile">Welcome <?php echo $_SESSION['custName']; ?></a>
             <a href="logout.php">Logout</a>
         </div>
@@ -33,6 +34,10 @@ if (isset($_SESSION["signedin"]) == true) {
 <?php
     if (isset($_GET['sweets'])) {
         include("sweets.php");
+    }
+
+    if (isset($_GET['contactus'])) {
+        include("contactus.php");
     }
 
     if (isset($_GET['cart'])) {
