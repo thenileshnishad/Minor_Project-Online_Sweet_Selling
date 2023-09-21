@@ -1,7 +1,5 @@
 <?php
-
-if (isset($_SESSION["signedin"]) == true) {
-?>
+if (isset($_SESSION["signedin"]) == true) { ?>
     <html>
 
     <head>
@@ -40,4 +38,7 @@ if (isset($_SESSION["signedin"]) == true) {
     </table>
 
     </html>
-<?php } ?>
+<?php } else {
+    header("Location: signin.php");
+}
+?>

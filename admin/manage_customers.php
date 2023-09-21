@@ -1,10 +1,7 @@
 <?php
-
-if (isset($_SESSION["signedin"]) == true) {
-?>
-
+if (isset($_SESSION["signedin"]) == true) { ?>
     <html>
-        
+
     <head>
         <link rel="stylesheet" href="css/manage_customersStyle.css">
     </head>
@@ -42,4 +39,8 @@ if (isset($_SESSION["signedin"]) == true) {
     </body>
 
     </html>
-    <?php } ?>;
+
+<?php } else {
+    header("Location: signin.php");
+}
+?>

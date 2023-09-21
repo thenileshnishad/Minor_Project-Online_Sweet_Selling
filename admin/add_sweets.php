@@ -1,9 +1,11 @@
 <?php
 
 if (isset($_SESSION["signedin"]) == true) { ?>
+
     <head>
         <link rel="stylesheet" href="css/add_sweetsStyle.css">
     </head>
+
     <body>
         <h2>Add Sweet Data</h2>
         <form action="" method="post" enctype="multipart/form-data" class="sweet-form">
@@ -22,39 +24,42 @@ if (isset($_SESSION["signedin"]) == true) { ?>
             <input type="submit" id="submit" name="insert_post" value="Insert Product Now" />
         </form>
     </body>
+
     </html>
-<?php } ?>
-
 <?php
-require '../vendor/autoload.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $sweet_name = $_POST["sweet_name"];
-    $sweet_price = $_POST["sweet_price"];
-    $sweet_desc = $_POST["sweet_desc"];
+    require '../vendor/autoload.php';
 
-
-    $sweet_image = $_FILES['sweet_image']['name'];
-    $sweet_image_tmp = $_FILES['sweet_image']['tmp_name'];
-    move_uploaded_file($sweet_image_tmp, "sweet_images/$sweet_image");
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $sweet_name = $_POST["sweet_name"];
+        $sweet_price = $_POST["sweet_price"];
+        $sweet_desc = $_POST["sweet_desc"];
 
 
-    $mongoClient = new MongoDB\Client("mongodb://localhost:27017");
-    $database = $mongoClient->sweetselling;
-    $collection = $database->sweets;
+        $sweet_image = $_FILES['sweet_image']['name'];
+        $sweet_image_tmp = $_FILES['sweet_image']['tmp_name'];
+        move_uploaded_file($sweet_image_tmp, "sweet_images/$sweet_image");
 
-    $insertResult = $collection->insertOne(
-        [
-            "sweet_name" => $sweet_name,
-            "sweet_price" => $sweet_price,
-            "sweet_desc" => $sweet_desc,
-            "sweet_image" => $sweet_image
-        ]
-    );
 
-    if ($insertResult->getInsertedCount() > 0) {
-        echo "<script>alert('Sweet data has been inserted!');</script>";
-        echo "<script>window.location.href='index.php?manage_sweets';</script>";
+        $mongoClient = new MongoDB\Client("mongodb://localhost:27017");
+        $database = $mongoClient->sweetselling;
+        $collection = $database->sweets;
+
+        $insertResult = $collection->insertOne(
+            [
+                "sweet_name" => $sweet_name,
+                "sweet_price" => $sweet_price,
+                "sweet_desc" => $sweet_desc,
+                "sweet_image" => $sweet_image
+            ]
+        );
+
+        if ($insertResult->getInsertedCount() > 0) {
+            echo "<script>alert('Sweet data has been inserted!');</script>";
+            echo "<script>window.location.href='index.php?manage_sweets';</script>";
+        }
     }
+} else {
+    header("Location: signin.php");
 }
 ?>
