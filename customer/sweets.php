@@ -18,19 +18,44 @@ if (isset($_SESSION["signedin"]) == true) {
         <div class="sweet-box">
             <?php
             foreach ($sweetsList as $list) { ?>
-                <div class="sweet">
-                    <h3><?php echo $list["sweet_name"]; ?></h3>
-                    <img class="sweetimg" src="../admin/sweet_images/<?php echo $list['sweet_image']; ?>" width='250' height='250' alt='img'>
-                    <p class="price">Rs.<?php echo $list["sweet_price"]; ?></p>
-                    <p class="description"><?php echo $list["sweet_desc"] ?></p>
-                    <button>Add to Cart</button>
-                </div>
+                <form class="sweet" action="" method="post">
+                    <div>
+                        <h3><?php echo $list["sweet_name"]; ?></h3>
+                        <img class="sweetimg" src="../admin/sweet_images/<?php echo $list['sweet_image']; ?>" width='250' height='250' alt='img'>
+                        <p class="price">Rs.<?php echo $list["sweet_price"]; ?></p>
+                        <p class="description"><?php echo $list["sweet_desc"] ?></p>
+
+                        <input type="hidden" name="sweetid" value="<?php echo $list["_id"]; ?>">
+
+                        <button name="addtocart">Add to Cart</button>
+                    </div>
+                </form>
             <?php } ?>
         </div>
     </body>
 
     </html>
-<?php } else {
+    <?php
+    if (isset($_POST["addtocart"])) {
+        $sweetid = $_POST["sweetid"];
+
+        $sweet = $collection->findOne([
+            "_id" => new MongoDB\BSON\ObjectID($sweetid)
+        ]);
+
+        if (!isset($_SESSION["cart"])) {
+            $_SESSION["cart"] = [];
+        }
+        $_SESSION["cart"][$sweetid] = [
+            "sweetname" => $sweet["sweet_name"],
+            "sweetprice" => $sweet["sweet_price"],
+            "sweetquantity" =>  isset($_SESSION["cart"][$sweetid]["sweetquantity"]) ? $_SESSION["cart"][$sweetid]["sweetquantity"] + 1 : 1
+        ]; ?>
+        <script>
+            alert("Sweet successfully added to the cart!");
+        </script>
+<?php }
+} else {
     header("Location: signin.php");
 }
 ?>
