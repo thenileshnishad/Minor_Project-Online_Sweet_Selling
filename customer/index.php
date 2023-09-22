@@ -1,4 +1,5 @@
 <?php
+
 session_name("customer");
 session_start();
 
@@ -22,7 +23,6 @@ if (isset($_SESSION["signedin"]) == true) {
 
         <div class="nav">
             <a href="index.php">Home</a>
-            <a href="index.php?sweets">Sweets</a>
             <a href="index.php?cart">Cart</a>
             <a href="index.php?contactus">Contact Us</a>
             <a href="index.php?custprofile">Welcome <?php echo $_SESSION['custName']; ?></a>
@@ -32,10 +32,6 @@ if (isset($_SESSION["signedin"]) == true) {
 
     </html>
 <?php
-    if (isset($_GET['sweets'])) {
-        include("sweets.php");
-    }
-
     if (isset($_GET['contactus'])) {
         include("contactus.php");
     }
@@ -50,6 +46,16 @@ if (isset($_SESSION["signedin"]) == true) {
 
     if (isset($_GET['custpasswd'])) {
         include("custpasswd.php");
+    }
+
+    if (!isset($_GET['contactus'])) {
+        if (!isset($_GET['cart'])) {
+            if (!isset($_GET['custprofile'])) {
+                if (!isset($_GET['custpasswd'])) {
+                    include('sweets.php');
+                }
+            }
+        }
     }
 } else {
     header("Location: signin.php");
