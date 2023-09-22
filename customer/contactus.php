@@ -19,7 +19,9 @@ if (isset($_SESSION["signedin"]) == true) { ?>
             <label for="message">Message:</label>
             <textarea name="message" id="message" required></textarea><br><br>
 
-            <input type="submit" id="submit" name="send" value="Send Message">
+            <input type="submit" id="submit" name="send" value="Send Message"><br><br>
+
+            <a href="https://github.com/thenileshnishad/Minor_Project-Online_Sweet_Selling">Check out the project's source code</a>
         </form>
     </body>
 
