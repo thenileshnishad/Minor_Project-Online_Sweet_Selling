@@ -53,7 +53,9 @@ if (isset($_SESSION["signedin"]) == true) {
         if (!isset($_GET['manage_sweets'])) {
             if (!isset($_GET['manage_customers'])) {
                 if (!isset($_GET['edit_sweets'])) {
-                    include("front.php");
+                    if (!isset($_GET['manage_bills'])) {
+                        include("front.php");
+                    }
                 }
             }
         }
