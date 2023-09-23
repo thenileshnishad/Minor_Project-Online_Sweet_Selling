@@ -23,6 +23,7 @@ if (isset($_SESSION["signedin"]) == true) {
             <a href="index.php?manage_sweets">Manage Sweets</a>
             <a href="index.php?manage_customers">Manage Customers</a>
             <a href="index.php?manage_bills">Invoices</a>
+            <a href="index.php?manage_contacts">Messages</a>
             <a href="index.php?front">Add new Admin</a>
             <a href="logout.php">Admin Logout</a>
         </div>
@@ -31,6 +32,10 @@ if (isset($_SESSION["signedin"]) == true) {
 <?php
     if (isset($_GET['add_sweets'])) {
         include("add_sweets.php");
+    }
+
+    if (isset($_GET['manage_contacts'])) {
+        include("manage_contacts.php");
     }
 
     if (isset($_GET['manage_sweets'])) {
@@ -54,7 +59,9 @@ if (isset($_SESSION["signedin"]) == true) {
             if (!isset($_GET['manage_customers'])) {
                 if (!isset($_GET['edit_sweets'])) {
                     if (!isset($_GET['manage_bills'])) {
-                        include("front.php");
+                        if (!isset($_GET['manage_contacts'])) {
+                            include("front.php");
+                        }
                     }
                 }
             }
