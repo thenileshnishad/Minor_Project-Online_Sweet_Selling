@@ -17,6 +17,26 @@ if (isset($_SESSION["signedin"]) == true) { ?>
                 <th>Timestamp</th>
                 <th>Delete</th>
             </tr>
+
+            <?php
+            require '../vendor/autoload.php';
+
+            $mongoClient = new MongoDB\Client("mongodb://localhost:27017");
+            $database = $mongoClient->sweetselling;
+            $collection = $database->bills;
+
+            $bills = $collection->find(); ?>
+
+            <?php foreach ($bills as $list) { ?>
+                <tr>
+                    <td><?php echo $list["_id"]; ?></td>
+                    <td><?php echo $list["custName"]; ?></td>
+                    <td><?php echo $list["email"]; ?></td>
+                    <td>Rs. <?php echo $list["total"]; ?></td>
+                    <td><?php echo date('d-m-Y g:i:s A', $list['timestamp']->toDateTime()->getTimestamp()); ?></td>
+                    <td>Delete</td>
+                </tr>
+            <?php } ?>
         </table>
     </body>
 
