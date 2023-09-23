@@ -8,7 +8,16 @@ if (isset($_SESSION["signedin"]) == true) { ?>
 
     <body>
         <h2>Generated Bills</h2>
-        <p>Generated bills will be displayed here</p>
+        <table border="1">
+            <tr>
+                <th>Bill ID</th>
+                <th>Customer name</th>
+                <th>Email</th>
+                <th>Total</th>
+                <th>Timestamp</th>
+                <th>Delete</th>
+            </tr>
+        </table>
     </body>
 
     </html>
