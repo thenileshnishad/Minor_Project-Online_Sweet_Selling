@@ -34,7 +34,7 @@ if (isset($_SESSION["signedin"]) == true) { ?>
                     <td><?php echo $list["email"]; ?></td>
                     <td>Rs. <?php echo $list["total"]; ?></td>
                     <td><?php echo date('d-m-Y g:i:s A', $list['timestamp']->toDateTime()->getTimestamp()); ?></td>
-                    <td>Delete</td>
+                    <td><a href="delete_bills.php?delbill=<?php echo $list["_id"]; ?>" class="delete-link">Delete</a></td>
                 </tr>
             <?php } ?>
         </table>
