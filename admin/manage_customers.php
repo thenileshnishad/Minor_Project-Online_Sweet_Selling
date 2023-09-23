@@ -3,7 +3,7 @@ if (isset($_SESSION["signedin"]) == true) { ?>
     <html>
 
     <head>
-        <link rel="stylesheet" href="css/manage_customersStyle.css">
+        <link rel="stylesheet" href="css/manage_Cust&BillsStyle.css">
     </head>
 
     <body>

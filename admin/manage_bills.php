@@ -3,12 +3,12 @@ if (isset($_SESSION["signedin"]) == true) { ?>
     <html>
 
     <head>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/manage_Cust&BillsStyle.css">
     </head>
 
     <body>
         <h2>Generated Bills</h2>
-        <table border="1">
+        <table class="user-table">
             <tr>
                 <th>Bill ID</th>
                 <th>Customer name</th>
