@@ -8,7 +8,7 @@ if (isset($_SESSION["signedin"]) == true) { ?>
 
     <body>
         <h2>Customer Messages</h2>
-        <table class="user-table" border="1">
+        <table class="user-table">
             <tr>
                 <th>Customer name</th>
                 <th>Email</th>
@@ -34,7 +34,7 @@ if (isset($_SESSION["signedin"]) == true) { ?>
                     <td><?php echo $list["regsweetname"]; ?></td>
                     <td><?php echo $list["subject"]; ?></td>
                     <td><?php echo $list["message"]; ?></td>
-                    <td>Delete</td>
+                    <td><a href="delete_contacts.php?delcontact=<?php echo $list["_id"]; ?>" class="delete-link">Delete</a></td>
                 </tr>
             <?php } ?>
         </table>
