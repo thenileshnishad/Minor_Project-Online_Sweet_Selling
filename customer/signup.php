@@ -36,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $address = $_POST["address"];
-    $mobno = $_POST["mobno"];
+    $stringmobno = $_POST["mobno"];
+    $mobno = (int)$stringmobno;
 
     $mongoClient = new MongoDB\Client("mongodb://localhost:27017");
     $database = $mongoClient->sweetselling;

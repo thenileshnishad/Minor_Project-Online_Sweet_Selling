@@ -51,7 +51,8 @@ if (isset($_SESSION["signedin"]) == true) {
         $sweet_image_tmp = $_FILES['sweet_image']['tmp_name'];
         move_uploaded_file($sweet_image_tmp, "sweet_images/$sweet_image");
 
-        $sweet_price = $_POST['sweet_price'];
+        $stringsweet_price = $_POST['sweet_price'];
+        $sweet_price = (float)$stringsweet_price;
         $sweet_desc = $_POST['sweet_desc'];
 
         $sweetUpdate = $collection->updateOne(

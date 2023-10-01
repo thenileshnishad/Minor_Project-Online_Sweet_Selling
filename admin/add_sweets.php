@@ -32,7 +32,8 @@ if (isset($_SESSION["signedin"]) == true) { ?>
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sweet_name = $_POST["sweet_name"];
-        $sweet_price = $_POST["sweet_price"];
+        $stringsweet_price = $_POST["sweet_price"];
+        $sweet_price = (float)$stringsweet_price;
         $sweet_desc = $_POST["sweet_desc"];
 
 

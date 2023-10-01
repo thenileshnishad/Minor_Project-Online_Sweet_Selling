@@ -47,7 +47,8 @@ if (isset($_SESSION["signedin"]) == true) {
     if (isset($_POST['update'])) {
         $name = $_POST['name'];
         $address = $_POST['address'];
-        $mob = $_POST['mobno'];
+        $stringmob = $_POST['mobno'];
+        $mob = (int)$stringmob;
 
         $custUpdate = $collection->updateOne(
             ["email" => $_SESSION["email"]],
