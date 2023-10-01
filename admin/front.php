@@ -8,12 +8,12 @@ if (isset($_SESSION["signedin"]) == true) { ?>
 
     <body>
         <div class="body">
-            <h2 class="welcome">Welcome! Admin <?php echo $_SESSION["adminName"] ?></h2>
+            <h2 class="welcome">Welcome! Admin: <?php echo $_SESSION["adminName"] ?></h2>
             <p>You are currently on the administration page of the Online Sweet Selling site. This dashboard gives you full
                 control to manage sweet data updates and deletions, as well as to delete customer data.</p>
         </div>
         <div class="addadmin">
-            <h2>Create new Admin</h2>
+            <h2>Create new Admin account</h2>
             <form action="" method="post">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br><br>
@@ -52,7 +52,7 @@ if (isset($_SESSION["signedin"]) == true) { ?>
         );
 
         if ($insertResult->getInsertedCount() > 0) {
-            echo "<script>alert('New Admin created successfully!');</script>";
+            echo "<script>alert('New Admin account created successfully!');</script>";
             echo "<script>window.location.href='index.php';</script>";
         }
     }

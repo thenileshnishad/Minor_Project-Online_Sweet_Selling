@@ -24,7 +24,6 @@ if (isset($_SESSION["signedin"]) == true) {
             <a href="index.php?manage_customers">Manage Customers</a>
             <a href="index.php?manage_bills">Invoices</a>
             <a href="index.php?manage_contacts">Messages</a>
-            <a href="index.php?front">Create new Admin</a>
             <a href="logout.php">Admin Logout</a>
         </div>
     </body>
