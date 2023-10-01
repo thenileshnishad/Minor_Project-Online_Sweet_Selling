@@ -9,6 +9,7 @@ if (isset($_SESSION["signedin"]) == true) {
 
     <head>
         <title>Online Sweet Selling</title>
+        <link rel="shortcut icon" href="../admin/site_images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/indexStyle.css">
     </head>
 
