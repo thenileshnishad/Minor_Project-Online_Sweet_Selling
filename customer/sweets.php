@@ -21,7 +21,9 @@ if (isset($_SESSION["signedin"]) == true) {
                 <form class="sweet" action="" method="post">
                     <div>
                         <h3><?php echo $list["sweet_name"]; ?></h3>
-                        <img class="sweetimg" src="../admin/sweet_images/<?php echo $list['sweet_image']; ?>" width='250' height='250' alt='img'>
+                        <a href="../admin/sweet_images/<?php echo $list['sweet_image']; ?>" target="_blank">
+                            <img class="sweetimg" src="../admin/sweet_images/<?php echo $list['sweet_image']; ?>" width='250' height='250' alt='img'>
+                        </a>
                         <p class="price">Rs.<?php echo $list["sweet_price"]; ?></p>
                         <p class="description"><?php echo $list["sweet_desc"] ?></p>
 
